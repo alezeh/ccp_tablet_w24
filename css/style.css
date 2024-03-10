@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0 1em;
+}
+
+nav {
+    background-color: #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* Adjust spacing */
+    align-items: center;
+    height: 80px;
+    margin: 0;
+}
+
+nav li {
+    height: 50px;
+}
+
+a.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    height: 25px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.active {
+    background-color: #ffffff;
+    color: purple;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: purple;
+}
+
+nav li:hover {
+    background-color: antiquewhite;
+    color: #ce223f;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+main img, video {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.container, .audio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.pet-info, .recipe-info, .travel-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 20px 0; */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 0%;
+}
+
+.gallery img, .gallery video {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; /* Optional: Add rounded corners to the images */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Optional: Add a subtle box shadow */
+    padding: 0 10%;
+}
+
+.gallery img:hover, .gallery video:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+.author-tag {
+    font-size: small;
+    color: #ce223f;
+    border: #ce223f 1px solid;
+    padding: 1%;
+}
+
+footer {
+    background-color: #ffffff;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    text-align: center;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    main img {
+        animation: none; /* Disable animations for images */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    main img, video {
+        width: 60%;
+    }
+    body {
+        padding: 0 2em;
+    }
+
+    nav {
+        position: sticky;
+        background-color: #ffffff;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        top: 0;
+        z-index: 1000; 
+    } 
+
+    nav ul {
+        height: 60px;
+    }
+
+    h1, h2 {
+        font-size: 24px;
+        text-decoration: underline;
+    }
+
+    h3, h4 {
+        font-size: 20px;
+    }
+
+
+    main img, video {
+        width: 70%;
+    }
+
+    .container {
+        margin: 10px 0;
+        padding: 0% 7%;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        width: 90%;
+        background-color: rgb(84, 110, 80);
+        border-radius: 5%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+    }
+
+    .gallery img, .gallery video, footer {
+        padding: 0 5%;
+    }
+
+    audio {
+        width: 80%; 
+        max-width: 600px; 
+        outline: none; 
+        margin-bottom: 20px; 
+        
+    }
+
+    audio {
+        max-width: 80%; 
+        margin: 20px auto; 
+        padding: 15px 25px; 
+        margin: 0 10px; 
+        font-size: 18px; 
+        border-radius: 10px; 
+    }
+
+}
